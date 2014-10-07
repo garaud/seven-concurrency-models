@@ -2,8 +2,14 @@ CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
 PROJECT(Threads_Locks)
 
 set(CMAKE_CXX_FLAGS "${CMAXE_CXX_FLAGS} -std=c++11 -Wall -pedantic -Wextra")
-
 find_package(Threads)
 
-add_executable(hello_thread hello_thread.cpp)
-target_link_libraries(hello_thread ${CMAKE_THREAD_LIBS_INIT})
+# List of files to compile
+set(_COMPILATION_UNITS hello_thread.cpp)
+
+# Loop on each compilation units.
+foreach(ccfile ${_COMPILATION_UNITS})
+  get_filename_component(basename ${ccfile} NAME_WE)
+  add_executable(${basename} ${ccfile})
+  target_link_libraries(${basename} ${CMAKE_THREAD_LIBS_INIT})
+endforeach()
