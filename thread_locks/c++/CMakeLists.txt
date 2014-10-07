@@ -1,7 +1,7 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
 PROJECT(Threads_Locks)
 
-set(CMAKE_CXX_FLAGS "${CMAXE_CXX_FLAGS} -std=c++11 -Wall -pedantic -Wextra")
+set(CMAKE_CXX_FLAGS "${CMAXE_CXX_FLAGS} -std=c++11 -Wall -pedantic -Wextra -fdiagnostics-color")
 find_package(Threads)
 
 # List of files to compile
