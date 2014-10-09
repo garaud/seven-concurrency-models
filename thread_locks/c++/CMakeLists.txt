@@ -5,7 +5,8 @@ set(CMAKE_CXX_FLAGS "${CMAXE_CXX_FLAGS} -std=c++11 -Wall -pedantic -Wextra -fdia
 find_package(Threads)
 
 # List of files to compile
-set(_COMPILATION_UNITS hello_thread.cpp)
+set(_COMPILATION_UNITS hello_thread.cpp
+                       wrong_counter.cpp)
 
 # Loop on each compilation units.
 foreach(ccfile ${_COMPILATION_UNITS})
