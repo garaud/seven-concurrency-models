@@ -1,10 +1,10 @@
 ;; Simple 'hello' thread example.
-;; Use sbcl threading support.
+;; Use bordeaux-threads threading support.
 
-(use-package :sb-thread)
-;; TODO: try to make thread with Bordeaux-threads package.
-;; (import :bordeaux-threads)
-;; (use-package :bordeaux-threads)
+(require 'asdf)
+(require 'bordeaux-threads)
+(rename-package 'bordeaux-threads 'bt)
+
 
 (defun hello ()
   (write-line "Hello from new thread")
@@ -12,7 +12,7 @@
 
 (defun main ()
   (write-line "Hello from main")
-  (make-thread 'hello)
+  (bt:make-thread 'hello)
   )
 
 (main)
