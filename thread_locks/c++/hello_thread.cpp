@@ -1,3 +1,4 @@
+// Simple 'hello' thread example.
 
 #include <iostream>
 #include <thread>
