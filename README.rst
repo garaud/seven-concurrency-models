@@ -38,7 +38,7 @@ with Clang_ (>=3.4), just do:
 
    CXX=clang++ cmake /path/to/7-concurrency/[chapter]/c++
 
-   in your build directory.
+in your build directory.
 
 Python
 ------
