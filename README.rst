@@ -50,6 +50,31 @@ Rust
 
 No Makefiles, just type ``rustc file.rs``
 
+Common Lisp
+-----------
+
+As I use Emacs_, I install Slime_ which comes with sbcl_ (Common Lisp compiler).
+
+In Emacs_, open a CLisp file, ``M-x slime`` and type ``(load "filename")`` in
+the Slime_ prompt. You can carry out the same operation in the sbcl_ prompt.
+
+Out of any Common Lisp REPL_, you can type:
+
+::
+
+   sbcl --script filename.lisp
+
+.. note::
+
+   For now, threading support is provided by sbcl_. I'll try to use
+   bordeaux-threads_ for a more portable multithreading support.
+
+.. Some links
 .. _CMake: http://www.cmake.org/
 .. _GCC: https://gcc.gnu.org/
 .. _Clang: http://clang.llvm.org/
+.. _Emacs: http://www.gnu.org/software/emacs/
+.. _Slime: https://common-lisp.net/project/slime/
+.. _sbcl: http://www.sbcl.org/
+.. _REPL: http://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop
+.. _bordeaux-threads: https://trac.common-lisp.net/bordeaux-threads/wiki/ApiDocumentation
