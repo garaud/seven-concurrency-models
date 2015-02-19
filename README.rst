@@ -31,6 +31,15 @@ It's an occasion to manipulate the new multithreading features of C++11.
 
 I generate Makefile with CMake_ and compile with GCC_ and Clang_.
 
+On my Debian, it's GCC_ which is used by default (>=4.9). If you want to compile
+with Clang_ (>=3.4), just do:
+
+::
+
+   CXX=clang++ cmake /path/to/7-concurrency/[chapter]/c++
+
+in your build directory.
+
 Rust
 ----
 
