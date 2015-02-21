@@ -62,12 +62,15 @@ Out of any Common Lisp REPL_, you can type:
 
 ::
 
-   sbcl --script filename.lisp
+  sbcl --script filename.lisp
 
-.. note::
+Clojure
+-------
 
-   For now, threading support is provided by sbcl_. I'll try to use
-   bordeaux-threads_ for a more portable multithreading support.
+Install Java JRE/JDK and Clojure_ >= 1.6. Most of the time, run with the
+``clojure`` command as ``clojure -cp . filename.clj``. Sometine, I think that
+I'll use leiningen_ (with a simple ``lein run``).
+
 
 .. Some links
 .. _CMake: http://www.cmake.org/
@@ -78,3 +81,5 @@ Out of any Common Lisp REPL_, you can type:
 .. _sbcl: http://www.sbcl.org/
 .. _REPL: http://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop
 .. _bordeaux-threads: https://trac.common-lisp.net/bordeaux-threads/wiki/ApiDocumentation
+.. _Clojure: http://clojure.org/
+.. _leiningen: http://leiningen.org/
