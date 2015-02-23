@@ -10,7 +10,6 @@ import threading
 def hello():
     print("Hello from new thread")
 
-
 def main():
     print("Hello from main")
     threading.Thread(target=hello).start()
