@@ -2,11 +2,11 @@
 // Mainly inspired from official book at
 // http://doc.rust-lang.org/book/concurrency.html
 
-use std::thread::Thread;
+use std::thread;
 
 fn main() {
     println!("Hello from main");
-    Thread::scoped(|| {
+    thread::spawn(|| {
         println!("Hello from new thread")
     });
 }
