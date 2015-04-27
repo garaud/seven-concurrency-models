@@ -13,7 +13,7 @@ Counter = type("Counter", (object,), {'count': 0})
 
 def increment_loop(counter):
     for _ in range(MAX_ITER):
-        counter.count += 1
+        counter.count = counter.count + 1
 
 def main():
     counter = Counter()
@@ -26,4 +26,13 @@ def main():
     print("Counter value '{}'".format(counter.count))
 
 if __name__ == '__main__':
+    # This forces to have more context switching to reproduce a data race in
+    # Python 2 and Python 3 respectively.
+    import sys
+    if sys.version_info.major == 2:
+        sys.setcheckinterval(20)
+    else:
+        # No more ticks in Python 3, it's time based.
+        # 0.05 millisecond, 1000 times smaller than the default (5 milliseconds)
+        sys.setswitchinterval(5e-5)
     main()
